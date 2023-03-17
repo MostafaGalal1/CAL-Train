@@ -8,6 +8,7 @@ station_init(struct station *station)
     station->passengers_in = 0;
     station->passengers_out = 0;
     pthread_cond_init(&station->train_arrival, NULL);
+    pthread_cond_init(&station->train_depart, NULL);
     pthread_mutex_init(&station->door_lock, NULL);
 }
 
